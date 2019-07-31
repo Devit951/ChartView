@@ -9,7 +9,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(ChartView(this).apply {
-            padding = 10
+            padding = 4f
             data = intArrayOf(500, 250, 1000, 100, 720, 570, 375, 125, 888, 270)
         })
     }

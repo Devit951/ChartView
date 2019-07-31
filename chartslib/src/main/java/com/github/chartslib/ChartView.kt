@@ -22,9 +22,9 @@ class ChartView @JvmOverloads constructor(context: Context, attrs: AttributeSet?
             invalidate()
         }
 
-    var padding = 0
+    var padding = 0f
         set(value){
-            field = value
+            field = dp2Px(value)
             invalidate()
         }
 
@@ -54,9 +54,9 @@ class ChartView @JvmOverloads constructor(context: Context, attrs: AttributeSet?
 
 
     private fun drawNumber(widthOfChart: Int, index: Int, item: Int, canvas: Canvas) {
-        canvas.save()
         val x = widthOfChart * index.toFloat() + widthOfChart / 4f
         val y = height.toFloat() - height * 0.05f / 2
+        canvas.save()
         canvas.rotate(-45f, x + padding, y - padding)
         canvas.drawText(
             item.toString(),
@@ -65,5 +65,9 @@ class ChartView @JvmOverloads constructor(context: Context, attrs: AttributeSet?
             textPaint
         )
         canvas.restore()
+    }
+
+    private fun dp2Px(dp: Float): Float {
+        return dp * context.resources.displayMetrics.density
     }
 }
