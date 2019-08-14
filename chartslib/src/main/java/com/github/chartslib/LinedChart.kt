@@ -48,4 +48,20 @@ class LinedChart(private val chart: Chart,
             }
         }
     }
+
+    class DiagonalWay(lineCount: Int,
+                      private val linePadding: Float = 20f): LineWay(lineCount){
+
+        override fun draw(lineCount: Int, padding: Float, linePaint: Paint, canvas: Canvas) {
+            var i = 0
+            var mutableLinePadding = linePadding
+            while (mutableLinePadding < canvas.width){
+                val pos = (i++ * mutableLinePadding)
+                canvas.save()
+                canvas.drawLine(0f, pos, pos, 0f, linePaint)
+                canvas.restore()
+                mutableLinePadding += 10
+            }
+        }
+    }
 }
