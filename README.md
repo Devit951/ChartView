@@ -1,4 +1,4 @@
-# ChartView
+# DecoratedChartView
 Decorate your chart!
 
 
