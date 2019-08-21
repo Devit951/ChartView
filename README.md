@@ -22,5 +22,5 @@ Decorate your chart!
 ## NumberedHorizontalChart(HorizontalChart())
 ![NumberedHorizontalChart(HorizontalChart())](https://user-images.githubusercontent.com/21290800/63411549-31c41b80-c40f-11e9-9931-8fa7e389e117.png)
 
-## LinedChart(VerticalChart(), ReversedDiagonalWay(DiagonalWay())).png
+## LinedChart(VerticalChart(), ReversedDiagonalWay(DiagonalWay()))
 ![LinedChart(VerticalChart(), ReversedDiagonalWay(DiagonalWay()))](https://user-images.githubusercontent.com/21290800/63411577-44d6eb80-c40f-11e9-8228-a3f24d8c18bb.png)
