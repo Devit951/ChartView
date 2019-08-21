@@ -64,4 +64,14 @@ class LinedChart(private val chart: Chart,
             }
         }
     }
+
+    class ReversedDiagonalWay(private val diagonalWay: DiagonalWay): LineWay(10){
+        override fun draw(lineCount: Int, padding: Float, linePaint: Paint, canvas: Canvas) {
+            canvas.save()
+            canvas.translate(canvas.width.toFloat(), canvas.height.toFloat())
+            canvas.rotate(180f)
+            diagonalWay.drawLine(padding, linePaint, canvas)
+            canvas.restore()
+        }
+    }
 }
